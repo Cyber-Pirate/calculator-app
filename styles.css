@@ -63,7 +63,7 @@ body{
     gap: 1px;
 }
 
-.grid-butts > button{
+.grid-butts > .btn{
     height: 60px;
     width: 70px;
     font-size: 1.3rem;
@@ -92,9 +92,11 @@ body{
 
 
 .n-0{
-   width: 100%;
    grid-column: span 2;
    border-bottom-left-radius: 10px;
+   outline: none;
+   border: none;
+   font-size: 1.2rem;
 }
 
 .eq{
@@ -105,6 +107,12 @@ body{
     background-color: rgba(253, 158, 42, 0.8);
     color: #ffff;
 }
+
+.op:hover{
+    background-color: rgba(253, 158, 42, .5);
+}
+
+
 
 /*
 #FD9E2A
