@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 80vh;
+    background: url(./mac_purp.jpg);
+}
+
+.calc-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 39.9vh;
+    height: 60vh;
+    gap: 1rem;
+    margin: 6rem auto 0rem auto;
+    border-radius: 10px;
+    background-color: rgba(35, 36, 38, 0.5);    ;
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+}
+
+.nav-butt{
+    display: flex;
+    justify-content: flex-start;
+    gap: .4rem;
+    margin: .8rem 0rem 0rem .8rem;
+}
+
+.n{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+
+.result{
+    width: 12%;
+    height: 25%;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}
+
+.grid-butts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+
+.grid-butts > button{
+    height: 60px;
+    width: 70px;
+    font-size: 1.3rem;
+    outline: none;
+    border: none;
+}
+
+
+.num{
+    background: rgba(113, 116, 123, 0.7);
+    color: #ffff;
+}
+
+.num:hover{
+    background: rgba(113, 116, 123, 1);
+}
+
+.top{
+    background-color: rgba(94, 93, 97, 0.7);
+    color: #ffff;
+}
+
+.top:hover{
+    background-color: rgba(94, 93, 97, .8);
+}
+
+
+.n-0{
+   width: 100%;
+   grid-column: span 2;
+   border-bottom-left-radius: 10px;
+}
+
+.eq{
+    border-bottom-right-radius: 10px;
+}
+
+.op{
+    background-color: rgba(253, 158, 42, 0.8);
+    color: #ffff;
+}
+
+/*
+#FD9E2A
+*/
