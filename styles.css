@@ -7,20 +7,25 @@
 }
 
 body{
-    height: 80vh;
-    background: url(./mac_purp.jpg);
+    height: fit-content;
+    /* background: url(./mac_purp.jpg); */
+    background-image: url('https://images.hdqwalls.com/download/macos-catalina-cb-1920x1080.jpg');
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    background-size: auto;
 }
+
 
 .calc-cont{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 39.9vh;
-    height: 60vh;
+    width: 19.3vw;
+    height: fit-content;
     gap: 1rem;
     margin: 6rem auto 0rem auto;
     border-radius: 10px;
-    background-color: rgba(35, 36, 38, 0.5);    ;
+    background-color: rgba(35, 36, 38, 0.7);    ;
     backdrop-filter: blur( 9px );
     -webkit-backdrop-filter: blur( 9px );
 }
@@ -32,71 +37,69 @@ body{
     margin: .8rem 0rem 0rem .8rem;
 }
 
-.n{
+.nav-butt>button{
     width: 10px;
     height: 10px;
     border-radius: 50%;
     border: none;
     outline: none;
-}
-
-.result{
-    width: 12%;
-    height: 25%;
+    cursor: pointer;
 }
 
 .red{
-    background-color: red;
+    background-color: rgb(199, 56, 75);
 }
 
 .yellow{
-    background-color: yellow;
+    background-color: rgb(210, 210, 45);
 }
 
 .green{
-    background-color: green;
+    background-color: rgb(56, 182, 56);
 }
+
+/* ============ NUMPAD ============*/
 
 .grid-butts{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
+    grid-template-rows: repeat(5, 60px);
+    gap: .1rem;
 }
 
-.grid-butts > .btn{
-    height: 60px;
-    width: 70px;
+.grid-butts > button{
+    cursor: pointer;
     font-size: 1.3rem;
     outline: none;
     border: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 
 .num{
-    background: rgba(113, 116, 123, 0.7);
+    background: rgba(113, 116, 123, 1.2);
     color: #ffff;
 }
 
 .num:hover{
-    background: rgba(113, 116, 123, 1);
+    background: rgba(113, 116, 123, .7);
+    transition: 200ms linear;
 }
 
 .top{
-    background-color: rgba(94, 93, 97, 0.7);
+    background-color: rgba(94, 93, 97, .7);
     color: #ffff;
 }
 
 .top:hover{
     background-color: rgba(94, 93, 97, .8);
+    transition:all 200ms linear;
 }
 
 
-.n-0{
+.s2{
    grid-column: span 2;
    border-bottom-left-radius: 10px;
-   outline: none;
-   border: none;
-   font-size: 1.2rem;
 }
 
 .eq{
@@ -104,16 +107,51 @@ body{
 }
 
 .op{
-    background-color: rgba(253, 158, 42, 0.8);
+    background-color: rgba(253, 158, 42, 1.2);
     color: #ffff;
 }
 
 .op:hover{
     background-color: rgba(253, 158, 42, .5);
+    transition: 100ms linear;
 }
 
 
+/*================ OUTPUT ==============*/
 
-/*
-#FD9E2A
-*/
+.result{
+    height: 9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 1rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    
+}
+
+.prev-val{
+    font-size: 1.1rem;
+    color: #ffff;
+    font-weight: 100;
+}
+
+.current-val{
+    font-size: 2rem;
+    color: #ffff;
+    font-weight: 300;
+}
+
+@media  screen and (max-width: 1028px) {
+    .calc-cont{
+        width: 37vw;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .calc-cont{
+        margin-top: 12rem;
+        width: 70vw;
+    }
+}
